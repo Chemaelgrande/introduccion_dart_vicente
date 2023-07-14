@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 void main() {
   final Map<dynamic, dynamic> personas = {
     1: "Pedro",
@@ -44,4 +45,19 @@ void main() {
   // mySports.forEach((element) {
   //   print(element);
   // });
+
+  final NewClass newClass = new NewClass("Jose");
+  final NewClass newClass2 = new NewClass("Jose");
+  const NewClass newClass3 = const NewClass("pepe");
+  const NewClass newClass4 = const NewClass("pepe");
+
+  print(newClass == newClass2);
+  print(newClass3 == newClass4);
+}
+
+class NewClass {
+  final String? nombre;
+  const NewClass(
+    this.nombre,
+  );
 }
